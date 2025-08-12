@@ -1,8 +1,9 @@
 import { Injectable } from '@nestjs/common';
+import { timestamp } from 'rxjs';
 
 @Injectable()
 export class AppService {
-  getHello(): string {
-    return 'Hello World!';
+  getHealthStatus() {
+    return { status: 'ok', timestamp: new Date()};
   }
 }
