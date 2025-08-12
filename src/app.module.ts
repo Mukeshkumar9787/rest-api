@@ -20,7 +20,6 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
         database: configService.get<string>('DB_SERVER_DB_NAME'),
         synchronize: true,
         entities: [User],
-        useUnifiedTopology: true,
       }),
     }),
     UsersModule,

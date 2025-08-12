@@ -11,17 +11,17 @@ describe('UsersController', () => {
     const module: TestingModule = await Test.createTestingModule({
       controllers: [UsersController],
       providers: [
-        UsersService, 
+        UsersService,
         {
           provide: getRepositoryToken(User),
-          useValue:{
+          useValue: {
             find: jest.fn(),
             findOne: jest.fn(),
             save: jest.fn(),
             create: jest.fn(),
-            delete: jest.fn()
-          }
-        }
+            delete: jest.fn(),
+          },
+        },
       ],
     }).compile();
 
