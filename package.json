@@ -8,8 +8,8 @@
   "scripts": {
     "build": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix && nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
-    "start": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix && nest start",
-    "start:dev": "nest start --watch",
+    "start": "npm run lint && nest start",
+    "start:dev": "npm run lint && nest start --watch",
     "start:debug": "nest start --debug --watch",
     "start:prod": "node dist/main",
     "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
